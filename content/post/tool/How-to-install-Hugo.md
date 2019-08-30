@@ -87,6 +87,6 @@ git add ./*
 git commit -m "YOUR COMMIT MESSAGE"
 git push origin master
 ```
-
+ > 如果有账号权限问题，说明之前没有配置ssh，可以参考[这篇博客](https://www.awaimai.com/2200.html)配置
 
 
