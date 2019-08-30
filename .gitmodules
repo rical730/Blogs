@@ -2,3 +2,7 @@
 	path = themes/hugo-tranquilpeak-theme
 	url = https://github.com/kakawait/hugo-tranquilpeak-theme.git
 	branch = master
+[submodule "public"]
+	path = public
+	url = git@github.com:rical730/rical730.github.io.git
+	branch = master

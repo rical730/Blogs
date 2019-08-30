@@ -89,4 +89,25 @@ git push origin master
 ```
  > 如果有账号权限问题，说明之前没有配置ssh，可以参考[这篇博客](https://www.awaimai.com/2200.html)配置
 
+# 部署博客网站
+这一步很关键，就是生成hugo静态页面，并push到我们的github.io上去
+- 添加github.io到blogs下的public目录里
+```sh
+git submodule add -b master git@github.com:rical730/rical730.github.io.git public
+```
+- 生成静态网站，该命令直接生成静态文件到public文件夹下
+```sh
+hugo
+```
+- 提交
+```sh
+cd public
+git add .
+git commit -m "YOUR COMMIT MESSAGE"
+git push origin master
+```
+- 查看你的github.io网站：`https://rical730.github.io`
 
+# 自动部署脚本
+ - 为了方便部署，Hugo提供了一个[自动部署的脚本](https://gohugo.io/hosting-and-deployment/hosting-on-github/#put-it-into-a-script)
+ - 这里有一份[自动脚本](https://github.com/rical730/blogs/blob/master/git_ci.sh)可以同时提交两个repo
